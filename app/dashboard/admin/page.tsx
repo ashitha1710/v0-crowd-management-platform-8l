@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -15,6 +15,7 @@ import {
   Activity,
   AlertTriangle,
   TrendingUp,
+  TrendingDown,
   MapPin,
   Clock,
   Settings,
@@ -27,6 +28,9 @@ import {
   UserCheck,
   BarChart3,
   PieChart,
+  X,
+  Play,
+  Pause,
 } from "lucide-react"
 import Link from "next/link"
 import {
@@ -46,7 +50,6 @@ import {
   Cell,
 } from "recharts"
 import { AIChatbot } from "@/components/ai-chatbot"
-import { RealTimeUpdates } from "@/components/real-time-updates"
 import { AIAnomalyDetection } from "@/components/ai-anomaly-detection"
 
 // Mock data for admin analytics
@@ -78,12 +81,12 @@ const mockAnalytics = {
     { name: "Crowd Control", value: 2, color: "#10b981" },
   ],
   zoneMetrics: [
-    { zone: "Main Stage", density: 92, incidents: 4, cameras: 6, status: "critical" },
-    { zone: "Food Court", density: 78, incidents: 2, cameras: 4, status: "high" },
-    { zone: "Entrance A", density: 65, incidents: 1, cameras: 3, status: "medium" },
-    { zone: "VIP Area", density: 45, incidents: 0, cameras: 2, status: "low" },
-    { zone: "Parking", density: 58, incidents: 0, cameras: 4, status: "medium" },
-    { zone: "Backstage", density: 35, incidents: 0, cameras: 3, status: "low" },
+    { zone: "Main Stage", density: 92, predictedDensity: 98, incidents: 4, cameras: 6, status: "critical" },
+    { zone: "Food Court", density: 78, predictedDensity: 85, incidents: 2, cameras: 4, status: "high" },
+    { zone: "Entrance A", density: 65, predictedDensity: 72, incidents: 1, cameras: 3, status: "medium" },
+    { zone: "VIP Area", density: 45, predictedDensity: 38, incidents: 0, cameras: 2, status: "low" },
+    { zone: "Parking", density: 58, predictedDensity: 65, incidents: 0, cameras: 4, status: "medium" },
+    { zone: "Backstage", density: 35, predictedDensity: 42, incidents: 0, cameras: 3, status: "low" },
   ],
   responderStatus: [
     { name: "Dr. Sarah Johnson", type: "Medical", status: "active", zone: "Food Court", incidents: 2 },
@@ -124,6 +127,8 @@ export default function AdminDashboard() {
   const [selectedTimeRange, setSelectedTimeRange] = useState("today")
   const [selectedZone, setSelectedZone] = useState("all")
   const [isRefreshing, setIsRefreshing] = useState(false)
+  const [selectedZoneVideo, setSelectedZoneVideo] = useState<{zone: string, video: string} | null>(null)
+  const [isZoneVideoPlaying, setIsZoneVideoPlaying] = useState(false)
 
   console.log("[v0] Admin dashboard rendering with state:", { selectedTimeRange, selectedZone, isRefreshing })
 
@@ -131,6 +136,28 @@ export default function AdminDashboard() {
     console.log("[v0] Refresh button clicked")
     setIsRefreshing(true)
     setTimeout(() => setIsRefreshing(false), 2000)
+  }
+
+  const getZoneVideoSource = (zoneName: string) => {
+    // Map zone names to video files
+    if (zoneName === "Food Court") {
+      return "/videos/food.mp4"
+    } else if (zoneName === "Parking") {
+      return "/videos/parking.mp4"
+    }
+    // Default fallback
+    return "/videos/cam1.mp4"
+  }
+
+  const handleViewZone = (zoneName: string) => {
+    const videoSource = getZoneVideoSource(zoneName)
+    setSelectedZoneVideo({ zone: zoneName, video: videoSource })
+    setIsZoneVideoPlaying(true)
+  }
+
+  const closeZoneVideoModal = () => {
+    setSelectedZoneVideo(null)
+    setIsZoneVideoPlaying(false)
   }
 
   const getZoneStatusColor = (status: string) => {
@@ -425,13 +452,44 @@ export default function AdminDashboard() {
           <TabsContent value="zones" className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <MapPin className="h-5 w-5" />
-                  <span>Zone Management</span>
+                <CardTitle className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="h-5 w-5" />
+                    <span>Zone Management</span>
+                  </div>
+                  <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+                    <Clock className="h-3 w-3 mr-1" />
+                    15min AI Predictions
+                  </Badge>
                 </CardTitle>
-                <CardDescription>Monitor and manage all event zones</CardDescription>
+                <CardDescription>Monitor and manage all event zones with AI-powered crowd density predictions</CardDescription>
               </CardHeader>
               <CardContent>
+                {/* Prediction Summary */}
+                <div className="mb-6 p-4 bg-muted/50 rounded-lg">
+                  <h4 className="font-semibold mb-3 flex items-center space-x-2">
+                    <TrendingUp className="h-4 w-4 text-warning" />
+                    <span>Critical Predictions (Next 15 minutes)</span>
+                  </h4>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="text-center p-3 bg-destructive/10 rounded border border-destructive/20">
+                      <div className="text-lg font-bold text-destructive">Main Stage</div>
+                      <div className="text-sm text-muted-foreground">92% → 98% (+6%)</div>
+                      <div className="text-xs text-destructive">Critical Risk</div>
+                    </div>
+                    <div className="text-center p-3 bg-warning/10 rounded border border-warning/20">
+                      <div className="text-lg font-bold text-warning">Food Court</div>
+                      <div className="text-sm text-muted-foreground">78% → 85% (+7%)</div>
+                      <div className="text-xs text-warning">High Risk</div>
+                    </div>
+                    <div className="text-center p-3 bg-success/10 rounded border border-success/20">
+                      <div className="text-lg font-bold text-success">VIP Area</div>
+                      <div className="text-sm text-muted-foreground">45% → 38% (-7%)</div>
+                      <div className="text-xs text-success">Improving</div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="grid gap-4">
                   {mockAnalytics.zoneMetrics.map((zone) => (
                     <Card key={zone.zone} className="border-l-4 border-l-primary">
@@ -440,20 +498,36 @@ export default function AdminDashboard() {
                           <h3 className="font-semibold">{zone.zone}</h3>
                           <div className="flex items-center space-x-2">
                             <Badge variant={getZoneStatusBadge(zone.status)}>{zone.status}</Badge>
-                            <Button variant="outline" size="sm">
+                            <Button variant="outline" size="sm" onClick={() => handleViewZone(zone.zone)}>
                               <Eye className="h-3 w-3 mr-1" />
                               View
                             </Button>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-4 gap-4">
+                        <div className="grid md:grid-cols-5 gap-4">
                           <div>
-                            <Label className="text-xs text-muted-foreground">Crowd Density</Label>
+                            <Label className="text-xs text-muted-foreground">Current Density</Label>
                             <div className="flex items-center space-x-2">
                               <Progress value={zone.density} className="h-2 flex-1" />
                               <span className={`text-sm font-medium ${getZoneStatusColor(zone.status)}`}>
                                 {zone.density}%
                               </span>
+                            </div>
+                          </div>
+                          <div>
+                            <Label className="text-xs text-muted-foreground">15min Prediction</Label>
+                            <div className="flex items-center space-x-2">
+                              <Progress value={zone.predictedDensity} className="h-2 flex-1" />
+                              <div className="flex items-center space-x-1">
+                                <span className={`text-sm font-medium ${getZoneStatusColor(zone.status)}`}>
+                                  {zone.predictedDensity}%
+                                </span>
+                                {zone.predictedDensity > zone.density ? (
+                                  <TrendingUp className="h-3 w-3 text-warning" />
+                                ) : (
+                                  <TrendingDown className="h-3 w-3 text-success" />
+                                )}
+                              </div>
                             </div>
                           </div>
                           <div>
@@ -522,7 +596,11 @@ export default function AdminDashboard() {
                               <Label className="text-xs text-muted-foreground">Active Incidents</Label>
                               <p className="font-medium">{responder.incidents}</p>
                             </div>
-                            <Button variant="outline" size="sm">
+                            <Button 
+                              variant="outline" 
+                              size="sm"
+                              onClick={() => window.open('tel:+919886744362', '_self')}
+                            >
                               <MessageCircle className="h-3 w-3 mr-1" />
                               Contact
                             </Button>
@@ -628,12 +706,64 @@ export default function AdminDashboard() {
           </TabsContent>
         </Tabs>
 
-        <div className="fixed top-20 right-4 w-80 z-40">
-          <RealTimeUpdates context="admin" />
-        </div>
       </div>
 
       <AIChatbot context="admin" />
+
+      {/* Zone Video Modal */}
+      {selectedZoneVideo && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+          <div className="bg-card rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div className="flex items-center justify-between p-4 border-b">
+              <div>
+                <h3 className="text-lg font-semibold">{selectedZoneVideo.zone} - Live Feed</h3>
+                <p className="text-sm text-muted-foreground">
+                  Real-time monitoring • {new Date().toLocaleTimeString()}
+                </p>
+              </div>
+              <Button variant="ghost" size="sm" onClick={closeZoneVideoModal}>
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+            <div className="p-4">
+              <div className="relative bg-black rounded-lg overflow-hidden">
+                <video
+                  src={selectedZoneVideo.video}
+                  controls
+                  autoPlay={isZoneVideoPlaying}
+                  className="w-full h-auto max-h-[60vh]"
+                  onPlay={() => setIsZoneVideoPlaying(true)}
+                  onPause={() => setIsZoneVideoPlaying(false)}
+                >
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                  {selectedZoneVideo.zone} - Live Feed
+                </div>
+              </div>
+              <div className="mt-4 flex items-center justify-between">
+                <div className="flex items-center space-x-4">
+                  <Badge variant="outline">
+                    Live Monitoring
+                  </Badge>
+                  <Badge variant="outline" className="bg-success/10 text-success border-success/20">
+                    Active
+                  </Badge>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Button variant="outline" size="sm" onClick={() => setIsZoneVideoPlaying(!isZoneVideoPlaying)}>
+                    {isZoneVideoPlaying ? <Pause className="h-4 w-4 mr-1" /> : <Play className="h-4 w-4 mr-1" />}
+                    {isZoneVideoPlaying ? "Pause" : "Play"}
+                  </Button>
+                  <Button size="sm">
+                    Dispatch Response Team
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

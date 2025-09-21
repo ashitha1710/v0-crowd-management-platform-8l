@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -26,7 +26,6 @@ import {
   Route,
 } from "lucide-react"
 import { AIChatbot } from "@/components/ai-chatbot"
-import { RealTimeUpdates } from "@/components/real-time-updates"
 import { Navigation } from "@/components/navigation"
 
 const mockIncidents = {
@@ -494,7 +493,11 @@ export default function ResponderDashboard() {
                   <Timer className="h-4 w-4 mr-2" />
                   Break Request
                 </Button>
-                <Button variant="outline" className="w-full justify-start bg-transparent">
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start bg-transparent"
+                  onClick={() => window.open('tel:9886744362', '_self')}
+                >
                   <MessageCircle className="h-4 w-4 mr-2" />
                   Contact Dispatch
                 </Button>
@@ -524,8 +527,6 @@ export default function ResponderDashboard() {
               </CardContent>
             </Card>
 
-            {/* Real-time Updates */}
-            <RealTimeUpdates context="responder" />
           </div>
         </div>
       </div>
