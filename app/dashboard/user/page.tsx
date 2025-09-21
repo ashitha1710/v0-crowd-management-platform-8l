@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -24,7 +24,6 @@ import {
 } from "lucide-react"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from "recharts"
 import { AIChatbot } from "@/components/ai-chatbot"
-import { RealTimeUpdates } from "@/components/real-time-updates"
 import { AIAnomalyDetection } from "@/components/ai-anomaly-detection"
 import { Navigation } from "@/components/navigation"
 
@@ -519,7 +518,11 @@ export default function UserDashboard() {
                   <AlertTriangle className="h-4 w-4 mr-2" />
                   Report Incident
                 </Button>
-                <Button variant="outline" className="w-full justify-start bg-transparent">
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start bg-transparent"
+                  onClick={() => window.open('tel:9886744362', '_self')}
+                >
                   <MessageCircle className="h-4 w-4 mr-2" />
                   Contact Support
                 </Button>
@@ -530,8 +533,6 @@ export default function UserDashboard() {
               </CardContent>
             </Card>
 
-            {/* Real-time Updates */}
-            <RealTimeUpdates context="user" />
 
             {/* AI Assistant */}
             <Card>

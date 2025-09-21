@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Eye, AlertTriangle, Brain, Camera, MapPin, Clock } from "lucide-react"
+import { Eye, AlertTriangle, Brain, Camera, MapPin, Clock, X, Play, Pause } from "lucide-react"
 
 interface AnomalyDetection {
   id: string
@@ -26,6 +26,8 @@ interface AIAnomalyDetectionProps {
 export function AIAnomalyDetection({ context = "user" }: AIAnomalyDetectionProps) {
   const [anomalies, setAnomalies] = useState<AnomalyDetection[]>([])
   const [isProcessing, setIsProcessing] = useState(true)
+  const [selectedAnomaly, setSelectedAnomaly] = useState<AnomalyDetection | null>(null)
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   useEffect(() => {
     // Simulate AI processing
@@ -52,21 +54,25 @@ export function AIAnomalyDetection({ context = "user" }: AIAnomalyDetectionProps
         type: "crowd_behavior" as const,
         description: "Unusual crowd movement pattern detected",
         confidence: 85 + Math.random() * 10,
+        cameraId: "CAM-1", // Force cam1 for crowd behavior
       },
       {
         type: "abandoned_object" as const,
         description: "Unattended bag detected for over 10 minutes",
         confidence: 92 + Math.random() * 5,
+        cameraId: "CAM-2", // Force cam2 for abandoned objects
       },
       {
         type: "unusual_movement" as const,
         description: "Person moving against crowd flow",
         confidence: 78 + Math.random() * 15,
+        cameraId: "CAM-1",
       },
       {
         type: "gathering" as const,
         description: "Large group forming outside designated area",
         confidence: 88 + Math.random() * 8,
+        cameraId: "CAM-2",
       },
     ]
 
@@ -78,7 +84,6 @@ export function AIAnomalyDetection({ context = "user" }: AIAnomalyDetectionProps
       id: Date.now().toString(),
       ...randomType,
       location: randomLocation,
-      cameraId: `CAM-${Math.floor(Math.random() * 24) + 1}`,
       timestamp: new Date(),
       status: "active",
       imageUrl: "/placeholder.svg?height=100&width=150&text=CCTV+Frame",
@@ -131,6 +136,27 @@ export function AIAnomalyDetection({ context = "user" }: AIAnomalyDetectionProps
       .split("_")
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ")
+  }
+
+  const getVideoSource = (cameraId: string) => {
+    // Map camera IDs to video files
+    if (cameraId.includes("1") || cameraId.includes("CAM-1")) {
+      return "/videos/cam1.mp4"
+    } else if (cameraId.includes("2") || cameraId.includes("CAM-2")) {
+      return "/videos/cam2.mp4"
+    }
+    // Default to cam1 for other cameras
+    return "/videos/cam1.mp4"
+  }
+
+  const handleViewAnomaly = (anomaly: AnomalyDetection) => {
+    setSelectedAnomaly(anomaly)
+    setIsVideoPlaying(true)
+  }
+
+  const closeVideoModal = () => {
+    setSelectedAnomaly(null)
+    setIsVideoPlaying(false)
   }
 
   if (isProcessing) {
@@ -216,7 +242,7 @@ export function AIAnomalyDetection({ context = "user" }: AIAnomalyDetectionProps
                         />
                       )}
                       <div className="flex flex-col space-y-1">
-                        <Button size="sm" variant="outline">
+                        <Button size="sm" variant="outline" onClick={() => handleViewAnomaly(anomaly)}>
                           <Eye className="h-3 w-3 mr-1" />
                           View
                         </Button>
@@ -251,6 +277,63 @@ export function AIAnomalyDetection({ context = "user" }: AIAnomalyDetectionProps
           </div>
         </div>
       </CardContent>
+
+      {/* Video Modal */}
+      {selectedAnomaly && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+          <div className="bg-card rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div className="flex items-center justify-between p-4 border-b">
+              <div>
+                <h3 className="text-lg font-semibold">{selectedAnomaly.description}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {selectedAnomaly.cameraId} • {selectedAnomaly.location} • {selectedAnomaly.timestamp.toLocaleTimeString()}
+                </p>
+              </div>
+              <Button variant="ghost" size="sm" onClick={closeVideoModal}>
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+            <div className="p-4">
+              <div className="relative bg-black rounded-lg overflow-hidden">
+                <video
+                  src={getVideoSource(selectedAnomaly.cameraId)}
+                  controls
+                  autoPlay={isVideoPlaying}
+                  className="w-full h-auto max-h-[60vh]"
+                  onPlay={() => setIsVideoPlaying(true)}
+                  onPause={() => setIsVideoPlaying(false)}
+                >
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                  {selectedAnomaly.cameraId} - Live Feed
+                </div>
+              </div>
+              <div className="mt-4 flex items-center justify-between">
+                <div className="flex items-center space-x-4">
+                  <Badge variant={getAnomalyBadge(selectedAnomaly.type)}>
+                    {formatAnomalyType(selectedAnomaly.type)}
+                  </Badge>
+                  <Badge variant="outline" className={getConfidenceColor(selectedAnomaly.confidence)}>
+                    {Math.round(selectedAnomaly.confidence)}% confidence
+                  </Badge>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Button variant="outline" size="sm" onClick={() => setIsVideoPlaying(!isVideoPlaying)}>
+                    {isVideoPlaying ? <Pause className="h-4 w-4 mr-1" /> : <Play className="h-4 w-4 mr-1" />}
+                    {isVideoPlaying ? "Pause" : "Play"}
+                  </Button>
+                  {context === "admin" && (
+                    <Button size="sm">
+                      Dispatch Response Team
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </Card>
   )
 }

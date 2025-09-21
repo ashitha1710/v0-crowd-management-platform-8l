@@ -35,19 +35,19 @@ export function AIChatbot({ context = "user" }: AIChatbotProps) {
   const contextPrompts = {
     user: [
       "What's the current crowd density at Main Stage?",
+      "Show me 15-minute predictions",
       "Help me find a lost person",
       "What are the predicted busy times?",
-      "Report a safety concern",
     ],
     responder: [
       "Show me active incidents in my zone",
+      "What's the 15-minute crowd forecast?",
       "What's the fastest route to Food Court?",
       "Request backup for current incident",
-      "Update incident status",
     ],
     admin: [
       "Generate system health report",
-      "Show me zone utilization analytics",
+      "Show me 15-minute zone predictions",
       "What are the current bottlenecks?",
       "Optimize responder deployment",
     ],
@@ -84,6 +84,9 @@ export function AIChatbot({ context = "user" }: AIChatbotProps) {
     const lowerInput = input.toLowerCase()
 
     if (lowerInput.includes("crowd") || lowerInput.includes("density")) {
+      if (lowerInput.includes("15") || lowerInput.includes("prediction") || lowerInput.includes("forecast")) {
+        return "15-Minute Crowd Density Predictions:\n\nMain Stage: 85% → 92% (+7% increase)\nFood Court: 72% → 78% (+6% increase)\nVIP Area: 45% → 38% (-7% decrease)\n\nRecommendation: Avoid Main Stage for next 20 minutes. VIP Area is getting less crowded - perfect time to visit!"
+      }
       return "Current crowd density at Main Stage is 85% (high). Food Court is at 72% (medium). I recommend avoiding Main Stage area for the next 15 minutes. Would you like me to suggest alternative routes?"
     }
 
@@ -98,8 +101,14 @@ export function AIChatbot({ context = "user" }: AIChatbotProps) {
       return "I can help you report an incident. Please describe what you've observed, and I'll categorize it and alert the appropriate responders. For immediate emergencies, please call 911."
     }
 
-    if (lowerInput.includes("prediction") || lowerInput.includes("forecast")) {
-      return "Based on our WE-GCN model analysis: Peak crowd expected at 2:30 PM (92% capacity). Main Stage will reach critical density in 15 minutes. I recommend crowd control measures at Entrance A and additional security at Food Court."
+    if (lowerInput.includes("prediction") || lowerInput.includes("forecast") || lowerInput.includes("15-minute") || lowerInput.includes("15 minute")) {
+      if (context === "admin") {
+        return "15-Minute AI Predictions:\n\nCRITICAL RISK:\n• Main Stage: 92% → 98% (+6% increase)\n• Food Court: 78% → 85% (+7% increase)\n\nHIGH RISK:\n• Entrance A: 65% → 72% (+7% increase)\n• Parking: 58% → 65% (+7% increase)\n\nIMPROVING:\n• VIP Area: 45% → 38% (-7% decrease)\n• Backstage: 35% → 42% (+7% increase)\n\nRecommendations:\n• Deploy crowd control at Main Stage\n• Add security at Food Court\n• Consider VIP Area as overflow zone"
+      } else if (context === "responder") {
+        return "15-Minute Crowd Forecast for Your Zone:\n\nMain Stage (Your Area):\n• Current: 92% density\n• Predicted: 98% density (+6%)\n• Risk Level: CRITICAL\n\nAction Required:\n• Prepare for crowd surge\n• Request additional backup\n• Set up crowd control barriers\n• Monitor for potential incidents\n\nTimeline: Critical density expected in 12-15 minutes"
+      } else {
+        return "15-Minute Crowd Predictions:\n\nAreas to AVOID:\n• Main Stage: Will reach 98% capacity\n• Food Court: Expecting 85% density\n\nSAFER Areas:\n• VIP Area: Decreasing to 38%\n• Backstage: Low density (42%)\n\nSmart Tips:\n• Visit Main Stage now or wait 30+ minutes\n• Food Court will be busy - consider alternatives\n• VIP Area is getting less crowded"
+      }
     }
 
     if (lowerInput.includes("route") || lowerInput.includes("navigate")) {
@@ -111,7 +120,7 @@ export function AIChatbot({ context = "user" }: AIChatbotProps) {
     }
 
     // Default response
-    return "I understand you're asking about event management. I can help with crowd monitoring, incident reporting, lost person searches, predictions, navigation, and system analytics. Could you be more specific about what you need assistance with?"
+    return "I understand you're asking about event management. I can help with crowd monitoring, 15-minute predictions, incident reporting, lost person searches, navigation, and system analytics. Could you be more specific about what you need assistance with?"
   }
 
   const handleQuickPrompt = (prompt: string) => {
@@ -166,7 +175,7 @@ export function AIChatbot({ context = "user" }: AIChatbotProps) {
                   <div className="flex items-start space-x-2">
                     {message.role === "assistant" && <Bot className="h-4 w-4 mt-0.5 flex-shrink-0" />}
                     {message.role === "user" && <User className="h-4 w-4 mt-0.5 flex-shrink-0" />}
-                    <div className="text-sm">{message.content}</div>
+                    <div className="text-sm whitespace-pre-line">{message.content}</div>
                   </div>
                   <div className="text-xs opacity-70 mt-1">
                     {message.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
