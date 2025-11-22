@@ -57,11 +57,6 @@ export function Navigation({
               <Shield className="h-8 w-8 text-blue-600" />
               <span className="text-xl font-bold text-gray-900">CrowdGuard</span>
             </Link>
-            {eventName && (
-              <div className="hidden md:block ml-4 pl-4 border-l border-gray-300">
-                <span className="text-sm text-gray-600">{eventName}</span>
-              </div>
-            )}
           </div>
 
           {/* Desktop Navigation */}
@@ -78,7 +73,6 @@ export function Navigation({
               {/* User Info */}
               <div className="flex items-center space-x-2">
                 <Badge className={getRoleColor()}>{userRole.charAt(0).toUpperCase() + userRole.slice(1)}</Badge>
-                <span className="text-sm text-gray-700">{userName}</span>
               </div>
 
               {/* Settings */}
@@ -121,9 +115,7 @@ export function Navigation({
                 <div className="px-4 py-2">
                   <div className="flex items-center space-x-2">
                     <Badge className={getRoleColor()}>{userRole.charAt(0).toUpperCase() + userRole.slice(1)}</Badge>
-                    <span className="text-sm text-gray-700">{userName}</span>
                   </div>
-                  {eventName && <div className="text-sm text-gray-600 mt-1">{eventName}</div>}
                 </div>
                 <Link href={getDashboardLink()}>
                   <Button variant="ghost" className="w-full justify-start">

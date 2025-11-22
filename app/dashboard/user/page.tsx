@@ -138,6 +138,14 @@ export default function UserDashboard() {
     }, 2000)
   }
 
+  const handleTabChange = (value: string) => {
+    if (value === "lost-found") {
+      window.open('https://lost-and-found-396665235482.us-west1.run.app/', '_blank');
+    } else {
+      setSelectedTab(value);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Component */}
@@ -163,7 +171,7 @@ export default function UserDashboard() {
               ))}
             </div>
 
-            <Tabs value={selectedTab} onValueChange={setSelectedTab} className="space-y-6">
+            <Tabs value={selectedTab} onValueChange={handleTabChange} className="space-y-6">
               <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="heatmap">Heat Map</TabsTrigger>
                 <TabsTrigger value="predictions">Predictions</TabsTrigger>

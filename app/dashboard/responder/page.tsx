@@ -418,63 +418,6 @@ export default function ResponderDashboard() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            {/* Responder Status */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Responder Status</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Current Status</span>
-                  <Badge
-                    variant={responderStatus === "available" ? "outline" : "default"}
-                    className={
-                      responderStatus === "available"
-                        ? "bg-success/10 text-success border-success/20"
-                        : "bg-warning/10 text-warning border-warning/20"
-                    }
-                  >
-                    {responderStatus === "available" ? "Available" : "Responding"}
-                  </Badge>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Location</span>
-                  <span className="font-medium">{currentLocation}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Active Incidents</span>
-                  <span className="font-medium">{incidents.filter((i) => i.assignedTo).length}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Response Time Avg</span>
-                  <span className="font-medium">4.2 min</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Zone Assignment */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Zone Assignment</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm">Main Stage</span>
-                    <Badge variant="outline">Primary</Badge>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm">Food Court</span>
-                    <Badge variant="outline">Secondary</Badge>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm">Entrance A</span>
-                    <Badge variant="outline">Backup</Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Quick Actions */}
             <Card>
               <CardHeader>
@@ -493,8 +436,8 @@ export default function ResponderDashboard() {
                   <Timer className="h-4 w-4 mr-2" />
                   Break Request
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="w-full justify-start bg-transparent"
                   onClick={() => window.open('tel:9886744362', '_self')}
                 >
@@ -503,30 +446,6 @@ export default function ResponderDashboard() {
                 </Button>
               </CardContent>
             </Card>
-
-            {/* Team Communication */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Team Status</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm">Dr. Sarah Johnson</span>
-                    <Badge className="bg-warning/10 text-warning border-warning/20">Busy</Badge>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm">Officer Mike Chen</span>
-                    <Badge className="bg-primary/10 text-primary border-primary/20">Active</Badge>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm">Tech Lead Alex Kim</span>
-                    <Badge className="bg-success/10 text-success border-success/20">Available</Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
           </div>
         </div>
       </div>
