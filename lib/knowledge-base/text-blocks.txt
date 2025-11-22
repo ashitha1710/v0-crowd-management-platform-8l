@@ -1,0 +1,170 @@
+Text Block 01: Emergency Medical Response Procedures Header
+Immediate Actions for Medical Emergencies. Assess the situation for safety risks. Activate emergency medical alert system immediately. Designate someone to call emergency services (dial 911). Provide basic first aid if trained and safe to do so. Secure the area to maintain crowd control.
+
+Text Block 02: Cardiac Arrest Protocol
+Cardiac Arrest Protocol. Start CPR immediately if trained. Use AED (Automated External Defibrillator) if available. Continue CPR until medical professionals arrive. Do not leave patient unattended.
+
+Text Block 03: Heat Exhaustion Management
+Heat Exhaustion Management. Symptoms: Excessive sweating, dizziness, weakness, nausea. Treatment: Move person to cool, shaded area. Remove excess clothing. Provide cool water to drink slowly. Apply cool, wet cloths to skin. Seek medical attention if symptoms worsen.
+
+Text Block 04: Crowd Crush Management
+Crowd Crush Management. Immediate Actions: Guide crowd to open exits to relieve pressure. Prevent forward surge. Assist fallen individuals. Coordinate with security for controlled evacuation. Medical personnel to assess for crush injuries (internal bleeding, organ damage).
+
+Text Block 05: Traumatic Injuries
+Traumatic Injuries. Spinal injuries: Keep person still, do not move unless necessary. Severe bleeding: Apply direct pressure with clean cloth. Fractures: Immobilize injured area, apply ice if possible. Burns: Cool with water, cover with clean cloth, prevent contamination.
+
+Text Block 06: Mental Health Crises
+Mental Health Crises. De-escalate situation calmly. Remove from stressful environment if possible. Listen without judgment. Summon mental health professionals if available. Prevent self-harm or harm to others.
+
+Text Block 57: Severe Allergic Reaction Protocol
+Severe Allergic Reaction (Anaphylaxis) Protocol. Symptoms: Sudden difficulty breathing, wheezing, coughing. Swelling of face, lips, tongue, or throat. Hives, itching, or rash. Nausea, vomiting, diarrhea, abdominal pain. Dizziness, confusion, or loss of consciousness. Rapid or weak pulse. Pale or bluish skin. Immediate Actions: Call emergency services (dial 911) immediately. Help person lie down and elevate legs if experiencing shock. If trained and available: Administer epinephrine auto-injector (EpiPen) in outer thigh. Loosen tight clothing and maintain airway. DO NOT give anything by mouth if person is having difficulty breathing. Monitor breathing and pulse continuously. If trained: Provide CPR if no breathing or pulse. Transport to emergency room immediately once symptoms improve.
+
+Text Block 07: Medical Equipment Checklist
+Medical Equipment Checklist. First aid kits at all medical stations. Automated External Defibrillators (AEDs). Oxygen tanks and masks. Blood pressure monitors. Glucose testing kits. Spinal immobilization equipment. Emergency stretchers.
+
+Text Block 08: Communication Protocols
+Communication Protocols. Use walkie-talkies for medical team coordination. Maintain clear radio channels for emergency calls. Establish emergency codes: Code Blue: Cardiac arrest Code Red: Fire emergency Code White: Severe weather evacuation Code Black: Crowd crush incident.
+
+Text Block 09: Post-Incident Procedures
+Post-Incident Procedures. Document all medical interventions. Provide incident reports for regulatory compliance. Review event with medical team for lessons learned.
+
+Text Block 10: Fire Prevention Measures - Venue Preparation
+Fire Prevention Measures - Venue Preparation. All exit doors must remain unlocked and unobstructed at all times. Emergency exit signs must be illuminated and visible. Fire lanes must be kept clear for emergency vehicles. Electrical equipment must be UL-certified and regularly inspected. Pyrotechnics and open flames strictly prohibited unless permitted. Smoking designated to approved areas only. Extension cords and multi-plug adapters limited to prevent overloading.
+
+Text Block 11: Crowd Management for Fire Safety
+Crowd Management for Fire Safety. Maximum capacity signs posted and enforced. Trained venue staff monitoring capacity levels. Emergency announcements system tested before event. Crowd barriers placed to prevent blocking of exits. Alcohol service limited to prevent impaired evacuation.
+
+Text Block 12: Fire Emergency Response - Discovering Fire or Smoke
+Fire Emergency Response Procedures - Discovering Fire or Smoke. Immediate Actions: Activate the nearest fire alarm pull station. Call emergency services (dial 911) and report location and nature of emergency. Alert security and event staff to initiate evacuation. If safe, attempt to extinguish small fires with appropriate extinguishers.
+
+Text Block 13: Evacuation Procedures
+Evacuation Procedures. Sound evacuation alarms throughout facility. Announce "FIRE - EVACUATE IMMEDIATELY" using public address system. Guide crowd to nearest emergency exits. Assist elderly, disabled, and children first. Prevent crowd surges at exit points. Account for all staff and critical personnel.
+
+Text Block 14: Firefighting Priorities
+Firefighting Priorities. Protect human life first. Evacuate the building. Prevent fire spread to critical areas. Contain fire until professionals arrive. Do not re-enter building until declared safe by fire officials.
+
+Text Block 15: Fire Extinguisher Types
+Types of Fire Extinguishers. Class A: Ordinary combustibles (wood, paper, cloth). Class B: Flammable liquids (gasoline, oil, grease). Class C: Electrical equipment. Class D: Combustible metals. Class K: Kitchen oils and greases.
+
+Text Block 16: PASS Method for Extinguisher Use
+PASS Method for Extinguisher Use. Pull the pin. Aim at base of fire. Squeeze the lever. Sweep side to side.
+
+Text Block 17: When NOT to Use Fire Extinguishers
+When NOT to Use Fire Extinguishers. Fire too large to control quickly. Fire spreading rapidly or jumping rooms. Smoke too dense to see fire location. Lack of safe escape route. Extinguisher uncertain or unfamiliar.
+
+Text Block 18: Emergency Communication - Key Phrases
+Emergency Communication - Key Emergency Phrases. "Attention all patrons: There is a fire in the building. Please evacuate immediately using the nearest exit." "Security and staff: Fire emergency activated. Initiate evacuation procedures." "First responders: Fire located at [location]. Evacuation in progress."
+
+Text Block 19: Communication Equipment
+Communication Equipment. Public address system (PA) - primary method. Emergency intercom system. Walkie-talkies for staff coordination. Cellular phones for emergency services. Emergency text alert system if available.
+
+Text Block 20: Coordinator Responsibilities - Stage/Area Coordinators
+Coordinator Responsibilities During Fire - Stage/Area Coordinators. Know location of nearest fire extinguishers and alarms. Be familiar with evacuation routes for assigned area. Assist in crowd management during evacuation. Report to command post once area is cleared.
+
+Text Block 21: Security Team Responsibilities
+Security Team Responsibilities. Establish perimeters to prevent re-entry. Guide emergency responders to fire location. Prevent panic by providing clear directions. Assist with crowd movement away from danger.
+
+Text Block 22: Medical Team Responsibilities
+Medical Team Responsibilities. Set up treatment areas away from building. Assist with evacuation of injured or impaired individuals. Monitor for smoke inhalation symptoms. Coordinate with fire department for injured victims.
+
+Text Block 23: Post-Fire Procedures
+Post-Fire Procedures. Do not re-enter building until permitted by fire officials. Conduct head count and missing person searches. Provide safety briefing to returning attendees. Document incident and response effectiveness.
+
+Text Block 24: Gate Operation Policies - Timing Guidelines
+Gate Operation Policies - Timing Guidelines. Gates open 30 minutes before scheduled event start time. Gates close when venue reaches maximum capacity OR 2 hours after event start (whichever comes first). Emergency gates can be opened during operation only for legitimate emergencies. VIP/artist entrance gates have flexible timing per artist rider requirements.
+
+Text Block 25: Capacity Management at Gates
+Capacity Management. Each gate has maximum throughput rate: 1000 people per hour. Monitor gate queues longer than 15 minutes. Implement crowd management barriers when needed. Never allow gate capacity to exceed 80% of maximum throughput.
+
+Text Block 26: Security Protocols at Gates
+Security Protocols. Conduct random security screenings (5-10% of attendees). Prohibited items: weapons, explosives, large bags, alcohol containers. Metal detectors at all main entrances. Security personnel stationed at each gate: minimum 2 per gate. Crowd control teams on standby for high-volume periods.
+
+Text Block 27: Decision Framework Emergency Situations (ALWAYS OPEN)
+Decision Framework: Should I Open This Gate? Emergency Situations (ALWAYS OPEN). Fire evacuation required. Medical emergency requiring immediate access. Security threat requiring emergency exit. Weather emergency (tornado, severe storm). Bomb threat or active shooter situation.
+
+Text Block 28: Decisions to Open Gates
+Crowd Management Decisions (CONDITIONALLY OPEN) - YES - Open Additional Gates When: Primary gate queues exceed 20 minutes. Crowd density near gate reaches 90% capacity. VIP/Elderly/Disabled lines form (priority access). Temperature extremes require faster entry. Event schedule changes requiring rapid crowd movement. Mall/hotel lobbies backing up with audiences.
+
+Text Block 29: Decisions to Keep Gates Closed
+Crowd Management Decisions (CONDITIONALLY OPEN) - NO - Keep Gates Closed When: Opening would create unsafe crowd flow. Target zone capacity already exceeded. Opening would block emergency vehicle access. Security concerns with external crowds. Traffic congestion would prevent safe dispersal.
+
+Text Block 30: Staff Shortage Considerations
+Staff Shortage Considerations. Minimum 2 security per gate must be maintained. Coordinate with supervisor before opening emergency gates. Consider bottleneck effects on other gates. Ensure proper crowd control barriers are in place. Monitor for pickpocketing/black market activity increases.
+
+Text Block 31: Standard Entrance Gates
+Gate Access Categories - Standard Entrance Gates. General admission tickets only. Metal detector and bag checks required. Ticket scanning verification. No re-entry without special wristband.
+
+Text Block 32: VIP/Artist Entrance Gates
+VIP/Artist Entrance Gates. Pre-verified guest lists. Designated security clearance. Separate entry to avoid general crowd mixing. Special timing accommodations per rider.
+
+Text Block 33: Emergency Exit Gates
+Emergency Exit Gates. Always unlocked during operating hours. Marked with illuminated exit signs. Connect to public sidewalks/streets directly. No ticket checks or security scanning. Push-bar operation for immediate exit.
+
+Text Block 34: Service/Staff Gates
+Service/Staff Gates. Keycard or badge access only. Deliveries and maintenance personnel. Medical and emergency response vehicles. Equipment and production trucks.
+
+Text Block 35: Queuing Best Practices
+Crowd Flow Management - Queuing Best Practices. Implement serpentine queue patterns for capacity. Provide shade/water stations for long waits. Real-time queue time announcements. Priority lines for elderly/disabled/infants. Signage indicating wait times clearly.
+
+Text Block 36: Surge Control Measures
+Surge Control Measures. Staggered gate opening times. Crowd control barriers (stanchions). Trained "queuing guides" for organization. Audio announcements to manage expectations. Security monitoring for queue-jumping.
+
+Text Block 37: Bottleneck Prevention
+Bottleneck Prevention. Monitor density levels at chokepoints. Deploy additional security during peak times. Consider temporary gate additions for concerts. Analyze historical data for pattern prediction.
+
+Text Block 38: Gate Status Reporting
+Communication Protocols - Gate Status Reporting. Report queue lengths every 10 minutes during peak times. Alert command center of security concerns immediately. Notify event producer of capacity issues. Coordinate with transportation authorities if needed.
+
+Text Block 39: Emergency Codes for Gates
+Emergency Codes. Code Orange: Crowd surge approaching. Code Red: Immediate gate opening required. Code Purple: Security threat detected. Code Black: Evacuation procedure initiated.
+
+Text Block 40: Radio Communication
+Radio Communication. Channel assignments per gate team. Regular check-ins with command post. Cross-gate coordination for load balancing. Emergency backup frequencies available.
+
+Text Block 41: General Admission FAQ - Wait Times
+General Admission Questions. Q: How long is the typical wait time? A: Typical waits are 5-15 minutes, but can reach 45+ minutes during peak arrival times.
+
+Text Block 42: General Admission FAQ - Re-entry
+General Admission Questions. Q: Can I go back outside once inside? A: General admission cannot re-enter. However, designated re-entry areas exist for those needing medical/paramedic assistance.
+
+Text Block 43: General Admission FAQ - Medical Conditions
+General Admission Questions. Q: What if I have a medical condition? A: Medical accommodations available. Please contact ticketing with documentation for accessibility assistance.
+
+Text Block 44: COVID/Safety Questions - Sanitation
+COVID/Safety Questions. Q: Are gates sanitized regularly? A: Touchpoints (turnstile bars, card readers) sanitized every 2 hours.
+
+Text Block 45: COVID/Safety Questions - Measures
+COVID/Safety Questions. Q: What safety measures are in place? A: Metal detectors, prohibited item searches, and trained security at all gates. Emergency protocols reviewed daily.
+
+Text Block 46: VIP/Press Questions - Access
+VIP/Press Questions. Q: How do I access the VIP entrance? A: Use designated VIP parking areas. Show credentials to security personnel at VIP gate.
+
+Text Block 47: VIP/Press Questions - Guest Use
+VIP/Press Questions. Q: Can guests use the VIP entrance? A: No, VIP entrance is reserved for credentialed personnel, artists, and pre-approved list holders.
+
+Text Block 48: Pre-Event Checklist
+Maintenance and Readiness - Pre-Event Checklist. All locks and mechanisms operational. Illuminated signage working properly. Metal detectors calibrated and tested. Emergency exit pathways clear and marked. Security cameras recording and monitored.
+
+Text Block 49: During Event Protocols
+During Event Protocols. Rotational staff breaks to maintain alertness. Backup power supplies tested and ready. Weather contingency plans developed. Communication systems fully operational.
+
+Text Block 50: Post-Event Procedures
+Post-Event Procedures. Complete security debrief and incident reports. Inspect gates for damage or malfunction. Reset counters and systems for next event. Security walkthrough of perimeter.
+
+Text Block 51: Weather Contingencies - Heat
+Special Event Considerations - Weather Contingencies. High heat: Open shaded queuing areas, provide water stations.
+
+Text Block 52: Weather Contingencies - Rain
+Weather Contingencies. Rain: Covered walkways and canopy deployment.
+
+Text Block 53: Weather Contingencies - Cold
+Weather Contingencies. Extreme cold: Heated tent areas, hand warming stations.
+
+Text Block 54: Weather Contingencies - Wind
+Weather Contingencies. Wind warnings: Balloon/barrier reinforcement.
+
+Text Block 55: VIP Celebrity Protocols
+VIP Celebrity Protocols. Additional security presence. Traffic management coordination. Press area separation. Emergency extraction routes.
+
+Text Block 56: Multi-Day Festivals
+Multi-Day Festivals. Different access badges per day. Re-entry wristband programs. Campgrounds with separate access points.

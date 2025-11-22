@@ -1,0 +1,108 @@
+# Medical Protocols for Crowded Events
+
+## Emergency Medical Response Procedures
+
+### Immediate Actions for Medical Emergencies
+1. Assess the situation for safety risks
+2. Activate emergency medical alert system immediately
+3. Designate someone to call emergency services (dial 911)
+4. Provide basic first aid if trained and safe to do so
+5. Secure the area to maintain crowd control
+
+### Cardiac Arrest Protocol
+- Start CPR immediately if trained
+- Use AED (Automated External Defibrillator) if available
+- Continue CPR until medical professionals arrive
+- Do not leave patient unattended
+
+### Heat Exhaustion Management
+Symptoms: Excessive sweating, dizziness, weakness, nausea
+Treatment:
+- Move person to cool, shaded area
+- Remove excess clothing
+- Provide cool water to drink slowly
+- Apply cool, wet cloths to skin
+- Seek medical attention if symptoms worsen
+
+### Crowd Crush Management
+Immediate Actions:
+- Guide crowd to open exits to relieve pressure
+- Prevent forward surge
+- Assist fallen individuals
+- Coordinate with security for controlled evacuation
+- Medical personnel to assess for crush injuries (internal bleeding, organ damage)
+
+### Traumatic Injuries
+- Spinal injuries: Keep person still, do not move unless necessary
+- Severe bleeding: Apply direct pressure with clean cloth
+- Fractures: Immobilize injured area, apply ice if possible
+- Burns: Cool with water, cover with clean cloth, prevent contamination
+
+### Mental Health Crises
+- De-escalate situation calmly
+- Remove from stressful environment if possible
+- Listen without judgment
+- Summon mental health professionals if available
+- Prevent self-harm or harm to others
+
+### Severe Allergic Reaction (Anaphylaxis) Protocol
+Symptoms:
+- Sudden difficulty breathing, wheezing, coughing
+- Swelling of face, lips, tongue, or throat
+- Hives, itching, or rash
+- Nausea, vomiting, diarrhea, abdominal pain
+- Dizziness, confusion, or loss of consciousness
+- Rapid or weak pulse
+- Pale or bluish skin
+
+Immediate Actions:
+1. Call emergency services (dial 911) immediately
+2. Help person lie down and elevate legs if experiencing shock
+3. If trained and available: Administer epinephrine auto-injector (EpiPen) in outer thigh
+4. Loosen tight clothing and maintain airway
+5. DO NOT give anything by mouth if person is having difficulty breathing
+6. Monitor breathing and pulse continuously
+7. If trained: Provide CPR if no breathing or pulse
+8. Transport to emergency room immediately once symptoms improve
+
+Emergency Equipment Required:
+- Epinephrine auto-injectors (EpiPen, Auvi-Q, Adrenaclick)
+- Oxygen delivery equipment if available
+- Blood pressure monitoring
+- IV access equipment for medical professionals
+
+Common Triggers in Event Settings:
+- Food allergies (peanuts, shellfish, dairy, eggs)
+- Insect stings (bees, wasps, hornets)
+- Medications
+- Latex exposure
+- Exercise-induced anaphylaxis
+
+Prevention and Preparedness:
+- Staff training on epinephrine administration
+- Location of epinephrine kits throughout venue
+- Medical alert system alerts for known allergies
+- Crowd control measures during high-risk activities
+
+## Medical Equipment Checklist
+- First aid kits at all medical stations
+- Automated External Defibrillators (AEDs)
+- Oxygen tanks and masks
+- Blood pressure monitors
+- Glucose testing kits
+- Spinal immobilization equipment
+- Emergency stretchers
+
+## Communication Protocols
+- Use walkie-talkies for medical team coordination
+- Maintain clear radio channels for emergency calls
+- Establish emergency codes:
+  - Code Blue: Cardiac arrest
+  - Code Red: Fire emergency
+  - Code White: Severe weather evacuation
+  - Code Black: Crowd crush incident
+
+## Post-Incident Procedures
+- Document all medical interventions
+- Provide incident reports for regulatory compliance
+- Review event with medical team for lessons learned

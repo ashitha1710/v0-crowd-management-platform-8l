@@ -1,0 +1,189 @@
+# Gate Management Guidelines and FAQs
+
+## General Gate Operation Policies
+
+### Timing Guidelines
+- Gates open 30 minutes before scheduled event start time
+- Gates close when venue reaches maximum capacity OR 2 hours after event start (whichever comes first)
+- Emergency gates can be opened during operation only for legitimate emergencies
+- VIP/artist entrance gates have flexible timing per artist rider requirements
+
+### Capacity Management
+- Each gate has maximum throughput rate: 1000 people per hour
+- Monitor gate queues longer than 15 minutes
+- Implement crowd management barriers when needed
+- Never allow gate capacity to exceed 80% of maximum throughput
+
+### Security Protocols
+- Conduct random security screenings (5-10% of attendees)
+- Prohibited items: weapons, explosives, large bags, alcohol containers
+- Metal detectors at all main entrances
+- Security personnel stationed at each gate: minimum 2 per gate
+- Crowd control teams on standby for high-volume periods
+
+## Decision Framework: Should I Open This Gate?
+
+### Emergency Situations (ALWAYS OPEN)
+- Fire evacuation required
+- Medical emergency requiring immediate access
+- Security threat requiring emergency exit
+- Weather emergency (tornado, severe storm)
+- Bomb threat or active shooter situation
+
+### Crowd Management Decisions (CONDITIONALLY OPEN)
+YES - Open Additional Gates When:
+- Primary gate queues exceed 20 minutes
+- Crowd density near gate reaches 90% capacity
+- VIP/Elderly/Disabled lines form (priority access)
+- Temperature extremes require faster entry
+- Event schedule changes requiring rapid crowd movement
+- Mall/hotel lobbies backing up with audiences
+
+NO - Keep Gates Closed When:
+- Opening would create unsafe crowd flow
+- Target zone capacity already exceeded
+- Opening would block emergency vehicle access
+- Security concerns with external crowds
+- Traffic congestion would prevent safe dispersal
+
+### Staff Shortage Considerations
+- Minimum 2 security per gate must be maintained
+- Coordinate with supervisor before opening emergency gates
+- Consider bottleneck effects on other gates
+- Ensure proper crowd control barriers are in place
+- Monitor for pickpocketing/black market activity increases
+
+## Gate Access Categories
+
+### Standard Entrance Gates
+- General admission tickets only
+- Metal detector and bag checks required
+- Ticket scanning verification
+- No re-entry without special wristband
+
+### VIP/Artist Entrance Gates
+- Pre-verified guest lists
+- Designated security clearance
+- Separate entry to avoid general crowd mixing
+- Special timing accommodations per rider
+
+### Emergency Exit Gates
+- Always unlocked during operating hours
+- Marked with illuminated exit signs
+- Connect to public sidewalks/streets directly
+- No ticket checks or security scanning
+- Push-bar operation for immediate exit
+
+### Service/Staff Gates
+- Keycard or badge access only
+- Deliveries and maintenance personnel
+- Medical and emergency response vehicles
+- Equipment and production trucks
+
+## Crowd Flow Management
+
+### Queuing Best Practices
+- Implement serpentine queue patterns for capacity
+- Provide shade/water stations for long waits
+- Real-time queue time announcements
+- Priority lines for elderly/disabled/infants
+- Signage indicating wait times clearly
+
+### Surge Control Measures
+- Staggered gate opening times
+- Crowd control barriers (stanchions)
+- Trained "queuing guides" for organization
+- Audio announcements to manage expectations
+- Security monitoring for queue-jumping
+
+### Bottleneck Prevention
+- Monitor density levels at chokepoints
+- Deploy additional security during peak times
+- Consider temporary gate additions for concerts
+- Analyze historical data for pattern prediction
+
+## Communication Protocols
+
+### Gate Status Reporting
+- Report queue lengths every 10 minutes during peak times
+- Alert command center of security concerns immediately
+- Notify event producer of capacity issues
+- Coordinate with transportation authorities if needed
+
+### Emergency Codes
+- Code Orange: Crowd surge approaching
+- Code Red: Immediate gate opening required
+- Code Purple: Security threat detected
+- Code Black: Evacuation procedure initiated
+
+### Radio Communication
+- Channel assignments per gate team
+- Regular check-ins with command post
+- Cross-gate coordination for load balancing
+- Emergency backup frequencies available
+
+## Frequently Asked Questions
+
+### General Admission Questions
+Q: How long is the typical wait time?
+A: Typical waits are 5-15 minutes, but can reach 45+ minutes during peak arrival times.
+
+Q: Can I go back outside once inside?
+A: General admission cannot re-enter. However, designated re-entry areas exist for those needing medical/paramedic assistance.
+
+Q: What if I have a medical condition?
+A: Medical accommodations available. Please contact ticketing with documentation for accessibility assistance.
+
+### COVID/Safety Questions
+Q: Are gates sanitized regularly?
+A: Touchpoints (turnstile bars, card readers) sanitized every 2 hours.
+
+Q: What safety measures are in place?
+A: Metal detectors, prohibited item searches, and trained security at all gates. Emergency protocols reviewed daily.
+
+### VIP/Press Questions
+Q: How do I access the VIP entrance?
+A: Use designated VIP parking areas. Show credentials to security personnel at VIP gate.
+
+Q: Can guests use the VIP entrance?
+A: No, VIP entrance is reserved for credentialed personnel, artists, and pre-approved list holders.
+
+## Maintenance and Readiness
+
+### Pre-Event Checklist
+- All locks and mechanisms operational
+- Illuminated signage working properly
+- Metal detectors calibrated and tested
+- Emergency exit pathways clear and marked
+- Security cameras recording and monitored
+
+### During Event Protocols
+- Rotational staff breaks to maintain alertness
+- Backup power supplies tested and ready
+- Weather contingency plans developed
+- Communication systems fully operational
+
+### Post-Event Procedures
+- Complete security debrief and incident reports
+- Inspect gates for damage or malfunction
+- Reset counters and systems for next event
+- Security walkthrough of perimeter
+
+## Special Event Considerations
+
+### Weather Contingencies
+- High heat: Open shaded queuing areas, provide water stations
+- Rain: Covered walkways and canopy deployment
+- Extreme cold: Heated tent areas, hand warming stations
+- Wind warnings: Balloon/barrier reinforcement
+
+### VIP Celebrity Protocols
+- Additional security presence
+- Traffic management coordination
+- Press area separation
+- Emergency extraction routes
+
+### Multi-Day Festivals
+- Different access badges per day
+- Re-entry wristband programs
+- Campgrounds with separate access points

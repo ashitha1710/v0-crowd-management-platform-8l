@@ -67,17 +67,38 @@ export function AIChatbot({ context = "user" }: AIChatbotProps) {
     setInputValue("")
     setIsLoading(true)
 
-    // Mock AI response - in real app, this would call your AI service
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: inputValue,
+          context: context,
+        }),
+      })
+
+      const data = await response.json()
+
       const aiResponse: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        content: generateMockResponse(inputValue, context),
+        content: data.message?.length > 1000 ? data.message.substring(0, 1000) + "\n\n[Response truncated - full protocol available in emergency manual]" : data.message || "I'm having trouble accessing the knowledge base. Please try again.",
         timestamp: new Date(),
       }
       setMessages((prev) => [...prev, aiResponse])
+    } catch (error) {
+      const errorResponse: Message = {
+        id: (Date.now() + 1).toString(),
+        role: "assistant",
+        content: "Sorry, I'm experiencing technical difficulties. Please try accessing emergency protocols manually.",
+        timestamp: new Date(),
+      }
+      setMessages((prev) => [...prev, errorResponse])
+    } finally {
       setIsLoading(false)
-    }, 1500)
+    }
   }
 
   const generateMockResponse = (input: string, context: string): string => {

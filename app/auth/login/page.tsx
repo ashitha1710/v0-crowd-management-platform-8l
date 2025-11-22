@@ -42,7 +42,7 @@ export default function LoginPage() {
     if (selectedRole && credentials.email && credentials.password) {
       // Mock authentication - in real app, validate credentials
       const dashboardRoutes = {
-        user: "/dashboard/user",
+        user: "/user", // Goes to verification page first
         admin: "/dashboard/admin",
         medical: "/dashboard/responder?type=medical",
         security: "/dashboard/responder?type=security",

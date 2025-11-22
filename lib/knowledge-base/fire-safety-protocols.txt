@@ -1,0 +1,105 @@
+# Fire Safety Protocols for Crowded Events
+
+## Fire Prevention Measures
+
+### Venue Preparation
+- All exit doors must remain unlocked and unobstructed at all times
+- Emergency exit signs must be illuminated and visible
+- Fire lanes must be kept clear for emergency vehicles
+- Electrical equipment must be UL-certified and regularly inspected
+- Pyrotechnics and open flames strictly prohibited unless permitted
+- Smoking designated to approved areas only
+- Extension cords and multi-plug adapters limited to prevent overloading
+
+### Crowd Management for Fire Safety
+- Maximum capacity signs posted and enforced
+- Trained venue staff monitoring capacity levels
+- Emergency announcements system tested before event
+- Crowd barriers placed to prevent blocking of exits
+- Alcohol service limited to prevent impaired evacuation
+
+## Fire Emergency Response Procedures
+
+### Discovering Fire or Smoke
+Immediate Actions:
+1. Activate the nearest fire alarm pull station
+2. Call emergency services (dial 911) and report location and nature of emergency
+3. Alert security and event staff to initiate evacuation
+4. If safe, attempt to extinguish small fires with appropriate extinguishers
+
+### Evacuation Procedures
+- Sound evacuation alarms throughout facility
+- Announce "FIRE - EVACUATE IMMEDIATELY" using public address system
+- Guide crowd to nearest emergency exits
+- Assist elderly, disabled, and children first
+- Prevent crowd surges at exit points
+- Account for all staff and critical personnel
+
+### Firefighting Priorities
+- Protect human life first
+- Evacuate the building
+- Prevent fire spread to critical areas
+- Contain fire until professionals arrive
+- Do not re-enter building until declared safe by fire officials
+
+## Fire Extinguisher Usage Guidelines
+
+### Types of Fire Extinguishers
+- Class A: Ordinary combustibles (wood, paper, cloth)
+- Class B: Flammable liquids (gasoline, oil, grease)
+- Class C: Electrical equipment
+- Class D: Combustible metals
+- Class K: Kitchen oils and greases
+
+### PASS Method for Extinguisher Use
+- Pull the pin
+- Aim at base of fire
+- Squeeze the lever
+- Sweep side to side
+
+### When NOT to Use Fire Extinguishers
+- Fire too large to control quickly
+- Fire spreading rapidly or jumping rooms
+- Smoke too dense to see fire location
+- Lack of safe escape route
+- Extinguisher uncertain or unfamiliar
+
+## Emergency Communication
+
+### Key Emergency Phrases
+- "Attention all patrons: There is a fire in the building. Please evacuate immediately using the nearest exit."
+- "Security and staff: Fire emergency activated. Initiate evacuation procedures."
+- "First responders: Fire located at [location]. Evacuation in progress."
+
+### Communication Equipment
+- Public address system (PA) - primary method
+- Emergency intercom system
+- Walkie-talkies for staff coordination
+- Cellular phones for emergency services
+- Emergency text alert system if available
+
+## Coordinator Responsibilities During Fire
+
+### Stage/Area Coordinators
+- Know location of nearest fire extinguishers and alarms
+- Be familiar with evacuation routes for assigned area
+- Assist in crowd management during evacuation
+- Report to command post once area is cleared
+
+### Security Team
+- Establish perimeters to prevent re-entry
+- Guide emergency responders to fire location
+- Prevent panic by providing clear directions
+- Assist with crowd movement away from danger
+
+### Medical Team
+- Set up treatment areas away from building
+- Assist with evacuation of injured or impaired individuals
+- Monitor for smoke inhalation symptoms
+- Coordinate with fire department for injured victims
+
+## Post-Fire Procedures
+- Do not re-enter building until permitted by fire officials
+- Conduct head count and missing person searches
+- Provide safety briefing to returning attendees
+- Document incident and response effectiveness
