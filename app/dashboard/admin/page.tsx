@@ -561,30 +561,14 @@ export default function AdminDashboard() {
                               <h3 className="font-semibold">{responder.name}</h3>
                               <p className="text-sm text-muted-foreground">{responder.type} Responder</p>
                             </div>
-                            <Badge
-                              variant={responder.status === "available" ? "outline" : "default"}
-                              className={
-                                responder.status === "available"
-                                  ? "bg-success/10 text-success border-success/20"
-                                  : responder.status === "active"
-                                    ? "bg-destructive/10 text-destructive border-destructive/20"
-                                    : "bg-warning/10 text-warning border-warning/20"
-                              }
-                            >
-                              {responder.status}
-                            </Badge>
                           </div>
                           <div className="flex items-center space-x-4 text-sm">
-                            <div>
-                              <Label className="text-xs text-muted-foreground">Zone</Label>
-                              <p className="font-medium">{responder.zone}</p>
-                            </div>
                             <div>
                               <Label className="text-xs text-muted-foreground">Active Incidents</Label>
                               <p className="font-medium">{responder.incidents}</p>
                             </div>
-                            <Button 
-                              variant="outline" 
+                            <Button
+                              variant="outline"
                               size="sm"
                               onClick={() => window.open('tel:+919886744362', '_self')}
                             >

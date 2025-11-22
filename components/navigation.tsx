@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Shield, Bell, Settings, LogOut, Menu, X } from "lucide-react"
+import { Shield, Settings, LogOut, Menu, X } from "lucide-react"
 
 interface NavigationProps {
   userRole?: "user" | "admin" | "responder"
@@ -73,15 +73,7 @@ export function Navigation({
                 </Button>
               </Link>
 
-              {/* Alerts */}
-              <Button variant="ghost" size="sm" className="relative">
-                <Bell className="h-4 w-4" />
-                {unreadAlerts > 0 && (
-                  <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs">
-                    {unreadAlerts}
-                  </Badge>
-                )}
-              </Button>
+
 
               {/* User Info */}
               <div className="flex items-center space-x-2">
@@ -138,11 +130,7 @@ export function Navigation({
                     Dashboard
                   </Button>
                 </Link>
-                <Button variant="ghost" className="w-full justify-start">
-                  <Bell className="h-4 w-4 mr-2" />
-                  Alerts
-                  {unreadAlerts > 0 && <Badge className="ml-auto">{unreadAlerts}</Badge>}
-                </Button>
+
                 <Button variant="ghost" className="w-full justify-start">
                   <Settings className="h-4 w-4 mr-2" />
                   Settings

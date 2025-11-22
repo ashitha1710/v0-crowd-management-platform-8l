@@ -26,6 +26,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { AIChatbot } from "@/components/ai-chatbot"
 import { AIAnomalyDetection } from "@/components/ai-anomaly-detection"
 import { Navigation } from "@/components/navigation"
+import Link from "next/link"
 
 // Mock data for demonstrations
 const mockCrowdData = [
@@ -74,6 +75,7 @@ const mockAlerts = [
 
 export default function UserDashboard() {
   const [selectedZone, setSelectedZone] = useState("main-stage")
+  const [selectedTab, setSelectedTab] = useState("heatmap")
   const [lostPersonForm, setLostPersonForm] = useState({
     name: "",
     description: "",
@@ -161,7 +163,7 @@ export default function UserDashboard() {
               ))}
             </div>
 
-            <Tabs defaultValue="heatmap" className="space-y-6">
+            <Tabs value={selectedTab} onValueChange={setSelectedTab} className="space-y-6">
               <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="heatmap">Heat Map</TabsTrigger>
                 <TabsTrigger value="predictions">Predictions</TabsTrigger>
@@ -486,74 +488,30 @@ export default function UserDashboard() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            {/* Event Info */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Event Status</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Total Attendees</span>
-                  <span className="font-medium">12,847</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Capacity</span>
-                  <span className="font-medium">15,000</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Utilization</span>
-                  <span className="font-medium text-success">85.6%</span>
-                </div>
-                <Progress value={85.6} className="h-2" />
-              </CardContent>
-            </Card>
-
             {/* Quick Actions */}
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                <Button variant="outline" className="w-full justify-start bg-transparent">
-                  <AlertTriangle className="h-4 w-4 mr-2" />
-                  Report Incident
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="w-full justify-start bg-transparent"
-                  onClick={() => window.open('tel:9886744362', '_self')}
-                >
-                  <MessageCircle className="h-4 w-4 mr-2" />
-                  Contact Support
-                </Button>
-                <Button variant="outline" className="w-full justify-start bg-transparent">
-                  <Users className="h-4 w-4 mr-2" />
-                  Find Lost Person
-                </Button>
-              </CardContent>
-            </Card>
-
-
-            {/* AI Assistant */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">AI Assistant</CardTitle>
-                <CardDescription>Ask questions about the event</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="bg-muted/50 rounded-lg p-3 text-sm">
-                    <p className="font-medium mb-1">CrowdGuard AI</p>
-                    <p className="text-muted-foreground">
-                      Hello! I can help you with crowd information, safety updates, and finding people. What would you
-                      like to know?
-                    </p>
-                  </div>
-                  <div className="flex space-x-2">
-                    <Input placeholder="Ask me anything..." className="flex-1" />
-                    <Button size="sm">Send</Button>
-                  </div>
-                </div>
+                <Link href="/report-incident">
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start bg-transparent sm:w-auto sm:flex-1 md:w-full"
+                  >
+                    <AlertTriangle className="h-4 w-4 mr-2" />
+                    Report New Incident
+                  </Button>
+                </Link>
+                <Link href="/request-backup">
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start bg-transparent sm:w-auto sm:flex-1 md:w-full"
+                  >
+                    <Users className="h-4 w-4 mr-2" />
+                    Request Backup
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
