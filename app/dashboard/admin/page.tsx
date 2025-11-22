@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -81,12 +81,12 @@ const mockAnalytics = {
     { name: "Crowd Control", value: 2, color: "#10b981" },
   ],
   zoneMetrics: [
-    { zone: "Main Stage", density: 92, predictedDensity: 98, incidents: 4, cameras: 6, status: "critical" },
-    { zone: "Food Court", density: 78, predictedDensity: 85, incidents: 2, cameras: 4, status: "high" },
-    { zone: "Entrance A", density: 65, predictedDensity: 72, incidents: 1, cameras: 3, status: "medium" },
-    { zone: "VIP Area", density: 45, predictedDensity: 38, incidents: 0, cameras: 2, status: "low" },
-    { zone: "Parking", density: 58, predictedDensity: 65, incidents: 0, cameras: 4, status: "medium" },
-    { zone: "Backstage", density: 35, predictedDensity: 42, incidents: 0, cameras: 3, status: "low" },
+    { zone: "Main Stage", density: 92, predictedDensity: 98, incidents: 4, cameras: 6, status: "critical", confidence: 72 },
+    { zone: "Food Court", density: 78, predictedDensity: 85, incidents: 2, cameras: 4, status: "high", confidence: 64 },
+    { zone: "Entrance A", density: 65, predictedDensity: 72, incidents: 1, cameras: 3, status: "medium", confidence: 58 },
+    { zone: "VIP Area", density: 45, predictedDensity: 38, incidents: 0, cameras: 2, status: "low", confidence: 80 },
+    { zone: "Parking", density: 58, predictedDensity: 65, incidents: 0, cameras: 4, status: "medium", confidence: 67 },
+    { zone: "Backstage", density: 35, predictedDensity: 42, incidents: 0, cameras: 3, status: "low", confidence: 75 },
   ],
   responderStatus: [
     { name: "Dr. Sarah Johnson", type: "Medical", status: "active", zone: "Food Court", incidents: 2 },
@@ -198,7 +198,7 @@ export default function AdminDashboard() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <Shield className="h-6 w-6 text-primary" />
+                {React.createElement(Shield as any, { className: "h-6 w-6 text-primary" })}
                 <span className="text-xl font-bold">CrowdGuard</span>
               </div>
               <Badge variant="outline" className="flex items-center space-x-1">
@@ -208,15 +208,6 @@ export default function AdminDashboard() {
               <Badge className="bg-success/10 text-success border-success/20">Summer Music Festival 2025</Badge>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm" onClick={handleRefresh} disabled={isRefreshing}>
-                <RefreshCw className={`h-4 w-4 ${isRefreshing ? "animate-spin" : ""}`} />
-              </Button>
-              <Button variant="ghost" size="sm">
-                <Bell className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="sm">
-                <MessageCircle className="h-4 w-4" />
-              </Button>
               <Link href="/">
                 <Button variant="outline" size="sm">
                   <LogOut className="h-4 w-4 mr-2" />
@@ -316,10 +307,6 @@ export default function AdminDashboard() {
                   <SelectItem value="month">This Month</SelectItem>
                 </SelectContent>
               </Select>
-              <Button variant="outline" size="sm">
-                <Download className="h-4 w-4 mr-2" />
-                Export
-              </Button>
             </div>
           </div>
 
@@ -518,15 +505,15 @@ export default function AdminDashboard() {
                             <Label className="text-xs text-muted-foreground">15min Prediction</Label>
                             <div className="flex items-center space-x-2">
                               <Progress value={zone.predictedDensity} className="h-2 flex-1" />
-                              <div className="flex items-center space-x-1">
-                                <span className={`text-sm font-medium ${getZoneStatusColor(zone.status)}`}>
-                                  {zone.predictedDensity}%
-                                </span>
+                              <div className="flex items-center space-x-2">
+                                <span className={`text-sm font-medium ${getZoneStatusColor(zone.status)}`}>{zone.predictedDensity}%</span>
                                 {zone.predictedDensity > zone.density ? (
                                   <TrendingUp className="h-3 w-3 text-warning" />
                                 ) : (
                                   <TrendingDown className="h-3 w-3 text-success" />
                                 )}
+                                <span className="text-xs text-muted-foreground">Confidence {zone.confidence}%</span>
+                                {zone.confidence < 60 ? <AlertTriangle className="h-3 w-3 text-destructive" /> : null}
                               </div>
                             </div>
                           </div>
