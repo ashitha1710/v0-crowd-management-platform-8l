@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import { useSearchParams } from "next/navigation"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -424,15 +425,28 @@ export default function ResponderDashboard() {
                 <CardTitle className="text-lg">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                <Button variant="outline" className="w-full justify-start bg-transparent">
-                  <AlertTriangle className="h-4 w-4 mr-2" />
-                  Report New Incident
-                </Button>
-                <Button variant="outline" className="w-full justify-start bg-transparent">
-                  <Route className="h-4 w-4 mr-2" />
-                  Request Backup
-                </Button>
-                <Button variant="outline" className="w-full justify-start bg-transparent">
+                <Link href="/report-incident">
+                  <Button variant="outline" className="w-full justify-start bg-transparent">
+                    <AlertTriangle className="h-4 w-4 mr-2" />
+                    Report New Incident
+                  </Button>
+                </Link>
+                <Link href="/request-backup">
+                  <Button variant="outline" className="w-full justify-start bg-transparent">
+                    <Route className="h-4 w-4 mr-2" />
+                    Request Backup
+                  </Button>
+                </Link>
+                <Button
+                  variant="outline"
+                  className="w-full justify-start bg-transparent"
+                  onClick={() => {
+                    if (confirm('Are you sure you want to request a break?')) {
+                      setResponderStatus('on-break');
+                      alert('Break request submitted. Your status has been updated to "On Break".');
+                    }
+                  }}
+                >
                   <Timer className="h-4 w-4 mr-2" />
                   Break Request
                 </Button>
